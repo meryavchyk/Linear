@@ -1,0 +1,44 @@
+table {
+    border: 1px solid dimgrey;
+    border-collapse: collapse;
+    font-size: 12pt;
+    font-weight: 580
+}
+
+tr {
+    text-align: right
+}
+
+th {
+    border: 1px solid dimgrey;
+    background-color: whitesmoke;
+    color: gray;
+    width: 70px;
+    font-size: 16pt;
+    text-align: center
+}
+
+td {
+    width: 70px
+}
+
+tr:nth-child(2n+3) {
+    background-color: aqua
+}
+
+tr:nth-child(2n+4) {
+    background-color: coral
+}
+
+#number {
+    width: 25px
+}
+
+#month, #left {
+    text-align: left
+}
+
+#tr-zero {
+    text-align: left;
+    background-color: olive
+}

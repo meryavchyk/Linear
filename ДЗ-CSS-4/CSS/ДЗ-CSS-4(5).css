@@ -1,0 +1,24 @@
+table {
+    width: 600px;
+    font-size: 16pt;
+    padding: 2px;
+    border-collapse: collapse; 
+    border: solid 2px black
+}
+td {
+        padding: 1px;
+    border: solid 1px black
+    }
+
+    td:nth-child(4n+1)::first-letter {
+background-color: palevioletred 
+    }
+    td:nth-child(4n+2)::first-letter {
+background-color: blue
+    }
+    td:nth-child(4n+3)::first-letter {
+background-color: yellowgreen
+    }
+    td:nth-child(4n+4)::first-letter {
+background-color: green
+    }
