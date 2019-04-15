@@ -11,7 +11,7 @@
         let secValue = parseFloat (prompt("Введіть бідь яку кількість секунд і дізнайтесь, скільки це в хвилинах!", "") )
         const MINUTE = 60
         const HOUR = 3600
-        let resultHour = secValue/HOUR
+        let resultHour = secValue/HOUR        Тут треба би взяти цілу частину від ділення Math.floor
         let resultMinute = secValue/MINUTE
         alert (resultMinute+"(хв.)! Натисіть 'ОК', якщо Вам цікаво скільки це в годинах!")
         alert (resultHour+"(год.)!")
