@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Задачі-Розгалудження</title>
+
+    <script>
+
+         //  1.2. ------------- З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає 
+        // то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.
+        // let money = parseFloat(prompt(`Введіть кількість грошей :`))
+        // let price = parseFloat(prompt(`Введіть ціну товару :`))
+        // if (money < price)
+        //     document.write(`Purchaising Dicleined!`)
+        // else {
+        //     if (money == price)
+        //         document.write(`Purchaising Succses!`)
+        //     else {
+        //         let diff = money - price
+        //         if (diff >= 4)
+        //             document.write(`Purchaising Succses!<br> Would you like to buy a lottery for 4.00 uah?`)
+        //     }
+        // }
+
+        // Задача 2. ------------- З клавіатури вводиться назва категорії водія. 
+        // Вивести на екран назву транспортного засобу, яким він може керувати
+        // let category = prompt(`Input your driver category ("A", "B", "C", "D"`)
+        // switch (category) {
+        //     case `A`: document.write(`You can drive a motorcycle or a moped!`)
+        //         break;
+        //     case `B`: document.write(`You can drive a car, crossover and minivan!`)
+        //         break;
+        //     case `C`: document.write(`You can drive a buses!`)
+        //         break;
+        //     case `D`: document.write(`You can drive a trucks!`)
+        //         break;
+        //     default: document.write(`Error - uncorect input data!`)
+        //         break;
+        // }
+
+        // 1. -------------	На роботу компаніє приймає працівників від 32 до 45 років. 
+        // З клавіатури вводиться вік претендента. З’ясувати, чи може він бути прийнятим на роботу.
+        // let age = parseInt(prompt('Введіть кількіть повних років :'))
+        // if (age >= 32 && age <=45)
+        // document.write(`Вітаємо! Вас прийнято!`)
+        // else
+        // document.write(`Вибачте, Вам відмовлено.`)
+
+        // // 2. -------------	З клавіатури вводиться кількість балів. 
+        // // Вивести на екран оцінку (задовільно, добре чи відмінно).
+        // let mark = parseInt(prompt(`Введіть оцінку :`))
+        // switch (mark) {
+        //     case 3: document.write(`Задовільно`)
+        //         break;
+        //     case 4: document.write(`Добре`)
+        //         break;
+        //     case 5: document.write(`Відмінно!`)
+        //         break;
+        //     default: document.write(`Помилка. Некоректні дані.`)
+        //         break;
+        // }
+
+        // ------------- 4.	З клавіатури вводиться вік людини. 
+        // Вивести на екран ким він є (дитиною у садочку, школярем, студентом, працівником, пенсіонером).
+        // let age = parseInt(prompt(`Enter age :`))
+        // if (age < 0)
+        //     document.write(`I'm guessing this is an error`)
+        // else
+        //     if (age >= 0 && age <= 2)
+        //         document.write(`It's cutie little baby :)`)
+        //     else
+        //         if (age >= 3 && age <= 6)
+        //             document.write(`It's baby :)`)
+        //         else
+        //             if (age >= 7 && age <= 17)
+        //                 document.write(`It's schooler.`)
+        //             else
+        //                 if (age >= 18 && age <= 23)
+        //                     document.write(`It's student.`)
+        //                 else
+        //                     if (age >= 24 && age <= 65)
+        //                         document.write(`It's worker.`)
+        //                     else
+        //                         if (age >= 66)
+        //                             document.write(`It's retiree.`)
+     
+
+        // --------------- 7.	Родина їде на відпочинок автомобілем. З клавіатури вводиться наявна кількість літрів палива, 
+        // витрати палива на 100 кілометрів та відстань, яку необхідно подолати. Вивести на екран чи потрібно, 
+        // чи не потрібно буде додатково заправляти автомобіль.
+        // let fuel = parseInt(prompt(`Введіть наявну кількість літрів палива :`))
+        // let consum = parseInt(prompt(`Введіть витрату палива на 100км. :`))
+        // let dist = parseInt(prompt(`Введіть відстань в км. :`))
+        // let distReal = (fuel / consum) * 100
+        // if (distReal >= dist)
+        //     document.write(`Дозаправка не потрібна!`)
+        // else
+        //     document.write(`Потрібно дозаправитись!`)
+
+
+
+        // ------------- 8.	Користувач може здійснити покупку у одному із двох відділів 
+        //         («побутова техніка» або «інструменти»). При цьому у кожному із відділів 
+        //         йому будуть пропонувати один із перерахованих товарів:
+        //  Вивести на екран назву товару, яку вибрав користувач.
+
+        // let userChoice = parseInt(prompt(`Виберіть пункт меню\n1. Побутова техніка\n2. Інструменти`))
+        // if (userChoice == 1) {
+        //     let userChoice1 = parseInt(prompt(` Виберіть пункт меню\n1. Телевізор\n2. Праска\n3. Планшет`))
+        //     if (userChoice1 == 1)
+        //         document.write(`Вітаємо з покупкою Телевізора!`)
+        //     else {
+        //         if (userChoice1 == 2)
+        //             document.write(`Вітаємо з покупкою Праски!`)
+        //         else
+        //             document.write(`Вітаємо з покупкою Планшета!`)
+        //     }
+        // }
+        // else {
+        //     let userChoice2 = parseInt(prompt(`Виберіть пункт меню\n1. Лопата\n2. Граблі\n3. Мітла\n4. Пила`))
+        //     if (userChoice2 == 1)
+        //         document.write(`Вітаємо з покупкою Лопати!`)
+        //     else {
+        //         if (userChoice2 == 2)
+        //             document.write(`Вітаємо з покупкою Грабель!`)
+        //         else {
+        //             if (userChoice2 == 3)
+        //                 document.write(`Вітаємо з покупкою Мітли!`)
+        //             else {
+        //                 if (userChoice2 == 4)
+        //                     document.write(`Вітаємо з покупкою Пили!`)
+        //             }
+        //         }
+        //     }
+        // }
+
+
+        //  ---------------- Задача 1. З клавіатури вводиться рівень доступу. Вивести на екран текстове представлення.
+        // 1.Аднміністратор
+        // 2.Менеджер
+        // 3.Редактор
+        // 4.Користувач
+
+        // let userChoice = prompt(`Введіть Ваш рівень доступу:\n1. Аднміністратор\n2. Менеджер\n3. Редактор\n4. Користувач`)
+        // switch (userChoice) {
+        //     case 'Аднміністратор': document.write('Аднміністратор')
+        //         break;
+        //     case 'Менеджер': document.write('Менеджер')
+        //         break;
+        //     case 'Редактор': document.write('Редактор')
+        //         break;
+        //     case 'Користувач': document.write('Користувач')
+        //         break;
+        //     default: document.write('Error')
+        //         break;
+        // }
+
+        // ----------------- Задача 1.1. Змінити попереднє завдання вивівши «працівник», якщо це перші 3 пункти.
+        // let userChoice = prompt(`Введіть Ваш рівень доступу:\n1. Аднміністратор\n2. Менеджер\n3. Редактор\n4. Користувач`)
+        // switch (userChoice) {
+        //     case 'Аднміністратор': 
+        //     case 'Менеджер': 
+        //     case 'Редактор': document.write('Працівник')
+        //     break;
+        //     case 'Користувач': document.write('Користувач')
+        //         break;
+        //     default: document.write('Error')
+        //         break;
+        // }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
