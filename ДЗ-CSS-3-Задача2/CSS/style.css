@@ -1,0 +1,34 @@
+table {
+    text-align: center;
+}
+
+.name {
+    font-weight: bold
+}
+
+.h1 {
+    background-color: turquoise
+}
+
+.timeCol {
+    background-color: grey;
+    height: 100px;
+    width: 30px
+}
+
+#season {
+    font-weight: bolder;
+    color: red
+}
+
+#pinkColor {
+    background-color: palevioletred
+}
+
+#grayColor {
+    background-color: darkslategrey
+}
+
+#timeCol {
+    background-color: grey
+}
