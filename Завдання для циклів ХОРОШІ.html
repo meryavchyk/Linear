@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Завдання для циклів ХОРОШІ</title>
+
+    <script>
+        // -------------- 0. Вивести на екран
+        // A B C D E
+        // B C D E F
+        // C D E F G
+        // D E F G H
+        // E F G H I
+        // let startCode = `A`.charCodeAt(0)
+        // let endCode = `E`.charCodeAt(0)
+
+        // for (let i = 0; i < 5; i++) {
+        //     for (let code = startCode; code <= endCode; code++) {
+        //         let symbol = String.fromCharCode(code)
+        //         document.write(`${symbol} `)
+        //     }
+        //     document.write(`<br>`)
+        //     startCode++
+        //     endCode++
+        // }
+
+        // --------------3. Задано единственное целое число N. 
+        // Необходимо вывести  все точные квадраты натуральных чисел, не превосходящие данного числа N.
+        // var userNum = parseInt(prompt(`Введіть число :`))
+        // var num = 1
+        // for (let index = 0; index < num; index++) {
+        //     var squer = num * num
+        //     if (squer < userNum) {
+        //         document.write(`${squer} `)
+        //         num++
+        //     }
+        // }
+
+        // -------------- 11. Написать программу, которая выводит на экран таблицу умножения на k 
+        // (k вводится с клавиатуры).
+        // var k = parseInt(prompt(`Введіть число :`))
+        // for (let i = 1; i <= 9; i++) {
+        //     document.write(`${k} * ${i} = ${k * i} <br>`)
+        // }
+
+        // 22. Ввести с клавиатуры 10 пар чисел. 
+        // сравнить числа в каждой паре и напечатать большие из них.
+
+        for (var i = 1; i <= 10; i++) {
+            var a = parseInt(prompt(`Input num "a"`))
+            var b = parseInt(prompt(`Input num "b"`))
+            if (a > b) {
+                document.write(`Пара №${i} - max - ${a}`)
+            } else
+                if (b > a) {
+                    document.write(`Пара №${i} - max - ${b}`)
+                } else
+                    document.write(`Пара №${i} - числа ${a} i ${b} рівні!`)
+        document.write(`<br>`)
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
