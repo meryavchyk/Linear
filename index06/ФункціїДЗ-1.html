@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ФункціїДЗ-1</title>
+    <script>
+
+        // ----------------------------------------------------------------------------
+        // Задача. Дано назву та ціни 4 товарів. Вивести назви товарів, 
+        // ціна яких не перевищує 1000грн.
+
+        // function isLess1000(name, price) {
+        //             if (price<1000) 
+        //             document.write(`${name}<br>`)
+        //         }
+        //         let name1 = prompt(`Введіть назву товару #1`)
+        //         let price1 = parseFloat(prompt(`Введіть ціну товару №1 :`))
+        //         let name2 = prompt(`Введіть назву товару #2`)
+        //         let price2 = parseFloat(prompt(`Введіть ціну товару №2 :`))
+        //         let name3 = prompt(`Введіть назву товару #3`)
+        //         let price3 = parseFloat(prompt(`Введіть ціну товару №3 :`))
+        //         let name4 = prompt(`Введіть назву товару #4`)
+        //         let price4 = parseFloat(prompt(`Введіть ціну товару №4 :`))
+
+        //         document.write(`Товари у яких вартість менше за 1000:<br>`)
+        //         isLess1000(name1, price1)
+        //         isLess1000(name2, price2)
+        //         isLess1000(name3, price3)
+        //         isLess1000(name4, price4)
+
+        // ---------------------------------------------------------------------------- 
+        // Задача. Дано вік 5 працівників. Визначити скільки серед них є пенсіонерів.
+
+        // function isRetiree(name, age) {
+        //     if (age > 65)
+        //         document.write(`${name}<br>`)
+        // }
+        // let name1 = prompt(`Введіть ім'я працівника #1`)
+        // let age1 = parseFloat(prompt(`Введіть вік працівника №1 :`))
+        // let name2 = prompt(`Введіть ім'я працівника #2`)
+        // let age2 = parseFloat(prompt(`Введіть вік працівника №2 :`))
+        // let name3 = prompt(`Введіть ім'я працівника #3`)
+        // let age3 = parseFloat(prompt(`Введіть вік працівника №3 :`))
+        // let name4 = prompt(`Введіть ім'я працівника #4`)
+        // let age4 = parseFloat(prompt(`Введіть вік працівника №4 :`))
+        // let name5 = prompt(`Введіть ім'я працівника #5`)
+        // let age5 = parseFloat(prompt(`Введіть вік працівника №5 :`))
+
+        // document.write(`Пенсіонерами серед працівників є: <br>`)
+        // isRetiree(name1, age1)
+        // isRetiree(name2, age2)
+        // isRetiree(name3, age3)
+        // isRetiree(name4, age4)
+        // isRetiree(name5, age5)
+
+        // ------------------------------------------------------------------------------------
+        // Дано ціни 4 товарів. Визначити, скільки кожного виду товарів може купити користувач 
+        // за наявну у нього кількість грошей.
+
+        // function getHowMany(name, price, sum) {
+        //     let res = Math.floor(sum / price)
+        //     document.write(`${name} x ${res}шт.<br>`)
+        // }
+
+        // let name1 = prompt(`Введіть назву товару #1`)
+        // let price1 = parseFloat(prompt(`Введіть вартість товару №1 :`))
+        // let name2 = prompt(`Введіть назву товару #2`)
+        // let price2 = parseInt(prompt(`Введіть ціну товару №2 :`))
+        // let name3 = prompt(`Введіть назву товару #3`)
+        // let price3 = parseInt(prompt(`Введіть ціну товару №3 :`))
+        // let name4 = prompt(`Введіть назву товару #4`)
+        // let price4 = parseInt(prompt(`Введіть ціну товару №4 :`))
+        // let sum = parseFloat(prompt(`Введіть наявну суму грошей :`))
+
+        // document.write(`У вас є ${sum}грн. На них ви можете купити:<br>`)
+        // getHowMany(name1, price1, sum)
+        // getHowMany(name2, price2, sum)
+        // getHowMany(name3, price3, sum)
+        // getHowMany(name4, price4, sum)
+
+
+        // ------------------------------------------------------------------------------------
+        // Задача 0. Створити функцію, яка за номером місяця повертає пору року, 
+        // до якої відноситься цей місяць.
+
+        // function whatSeason(season) {
+        //     switch (season) {
+        //         case 1: return `Це місяць пори року Зима`
+        //         case 2: return `Це місяць пори року Весна`
+        //         case 3: return `Це місяць пори року Літо`
+        //         case 4: return `Це місяць пори року Осінь`
+        //         default:
+        //             break;
+        //     }
+        // }
+
+        // let monthNum = parseInt(prompt(`Введіть номер місяця :`))
+        // let season
+        // switch (monthNum) {
+        //     case 12:
+        //     case 1:
+        //     case 2: season = whatSeason(1)
+        //         break;
+        //     case 3:
+        //     case 4:
+        //     case 5: season = whatSeason(2)
+        //         break;
+        //     case 6:
+        //     case 7:
+        //     case 8: season = whatSeason(3)
+        //         break;
+        //     case 1:
+        //     case 1:
+        //     case 1: season = whatSeason(4)
+        //         break;
+        //     default:
+        //         break;
+        // }
+        // document.write(season)
+
+        // ------------------------------------------------------------------------------------
+        // Задача 1. Створити функцію, яка за номером місяця повертає його назву.
+
+        // function whatMonth(month) {
+        //     switch (month) {
+        //         case 1: return `Січень`
+        //             break;
+        //         case 2: return `Лютий`
+        //             break;
+        //         case 3: return `Березень`
+        //             break;
+        //         case 4: return `Квітень`
+        //             break;
+        //         case 5: return `Травень`
+        //             break;
+        //         case 6: return `Червень`
+        //             break;
+        //         case 7: return `Липень`
+        //             break;
+        //         case 8: return `Серпень`
+        //             break;
+        //         case 9: return `Вересень`
+        //             break;
+        //         case 10: return `Жовтень`
+        //             break;
+        //         case 11: return `Листопад`
+        //             break;
+        //         case 12: return `Грудень`
+        //             break;
+        //     }
+        // }
+        // do {
+        //     var monthNum = parseInt(prompt(`Введіть номер місяця :\nВихід - "0"`))
+        //     let monthName
+        //     switch (monthNum) {
+        //         case 1: monthName = whatMonth(1)
+        //             break;
+        //         case 2: monthName = whatMonth(2)
+        //             break;
+        //         case 3: monthName = whatMonth(3)
+        //             break;
+        //         case 4: monthName = whatMonth(4)
+        //             break;
+        //         case 5: monthName = whatMonth(5)
+        //             break;
+        //         case 6: monthName = whatMonth(6)
+        //             break;
+        //         case 7: monthName = whatMonth(7)
+        //             break;
+        //         case 8: monthName = whatMonth(8)
+        //             break;
+        //         case 9: monthName = whatMonth(9)
+        //             break;
+        //         case 10: monthName = whatMonth(10)
+        //             break;
+        //         case 11: monthName = whatMonth(11)
+        //             break;
+        //         case 12: monthName = whatMonth(12)
+        //             break;
+        //         case 0: break;
+        //         default: alert(`А це за яким календарем ??!)))`)
+        //             break;
+        //     }
+        //     if (monthNum == 0)
+        //         break
+        //     else
+        //         alert(monthName)
+        // } while (monthNum !== 0)
+
+
+        // ------------------------------------------------------------------------------------
+        // Задача 2. Створити функцію, яка за номером тижня повертає кількість уроків(так, як у вас було у школі).
+
+        // function getHowManyLessons(day) {
+        //     switch (day) {
+        //         case 1: return `Сьогодні понеділок - 6 уроків.`
+        //             break;
+        //         case 2: return `Сьогодні вівторок - 5 уроків.`
+        //             break;
+        //         case 3: return `Сьогодні середа - 4 уроки.`
+        //             break;
+        //         case 4: return `Сьогодні четвер - 7 уроків.`
+        //             break;
+        //         case 5: return `Сьогодні п'ятниця - 5 уроків.`
+        //             break;
+        //         case 6:
+        //         case 7: return `Сьогодні вихідний! Уроків немає!).`
+        //             break;
+        //     }
+        // }
+        // do {
+        //     let dayNum = parseInt(prompt(`Введіть номер дня тижня :\nВихід - "0"`))
+        //     let message
+        //     switch (dayNum) {
+        //         case 1: message = getHowManyLessons(1)
+        //             break;
+        //         case 2: message = getHowManyLessons(2)
+        //             break;
+        //         case 3: message = getHowManyLessons(3)
+        //             break;
+        //         case 4: message = getHowManyLessons(4)
+        //             break;
+        //         case 5: message = getHowManyLessons(5)
+        //             break;
+        //         case 6: message = getHowManyLessons(6)
+        //             break;
+        //         case 7: message = getHowManyLessons(7)
+        //             break;
+        //         case 0: break;
+        //         default: alert(`А це за яким календарем ??!)))`)
+        //             break;
+        //     }
+        //     if (dayNum == 0)
+        //         break
+        //     else
+        //         alert(message)
+        // } while (dayNum !== 0)
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
