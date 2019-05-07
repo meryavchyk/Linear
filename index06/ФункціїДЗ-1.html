@@ -33,11 +33,12 @@
 
         // ---------------------------------------------------------------------------- 
         // Задача. Дано вік 5 працівників. Визначити скільки серед них є пенсіонерів.
-
-        // function isRetiree(name, age) {
+В принципі Ок, але можна зробити і трохи по іншому
+        // function isRetiree(name, age) { Краще, щоб фунція повертати true/false
         //     if (age > 65)
         //         document.write(`${name}<br>`)
         // }
+          А тут створити ще одну функцію, яка буде приймати імена і вік 4 працівників і виводить, що потрібно
         // let name1 = prompt(`Введіть ім'я працівника #1`)
         // let age1 = parseFloat(prompt(`Введіть вік працівника №1 :`))
         // let name2 = prompt(`Введіть ім'я працівника #2`)
@@ -86,13 +87,13 @@
         // Задача 0. Створити функцію, яка за номером місяця повертає пору року, 
         // до якої відноситься цей місяць.
 
-        // function whatSeason(season) {
+        // function whatSeason(season) {             Звичайно з функцією Ок. Але можна було switch з місяцями прямо сюди вставити
         //     switch (season) {
-        //         case 1: return `Це місяць пори року Зима`
+        //         case 1: return `Це місяць пори року Зима`   Також повертайте якомога менше інформації (тоді більше буде ситуацій, де її можна би використовувати). Достатньо було 'Зима'
         //         case 2: return `Це місяць пори року Весна`
         //         case 3: return `Це місяць пори року Літо`
         //         case 4: return `Це місяць пори року Осінь`
-        //         default:
+        //         default:          Тут треба також щось робити (якщо не хочете нічого робити, то взагалі default не пишіть
         //             break;
         //     }
         // }
@@ -112,8 +113,8 @@
         //     case 7:
         //     case 8: season = whatSeason(3)
         //         break;
-        //     case 1:
-        //     case 1:
+        //     case 1:           Бачу Ви дуже любите січень осінню :-)
+        //     case 1: 
         //     case 1: season = whatSeason(4)
         //         break;
         //     default:
@@ -154,40 +155,16 @@
         // }
         // do {
         //     var monthNum = parseInt(prompt(`Введіть номер місяця :\nВихід - "0"`))
-        //     let monthName
-        //     switch (monthNum) {
-        //         case 1: monthName = whatMonth(1)
-        //             break;
-        //         case 2: monthName = whatMonth(2)
-        //             break;
-        //         case 3: monthName = whatMonth(3)
-        //             break;
-        //         case 4: monthName = whatMonth(4)
-        //             break;
-        //         case 5: monthName = whatMonth(5)
-        //             break;
-        //         case 6: monthName = whatMonth(6)
-        //             break;
-        //         case 7: monthName = whatMonth(7)
-        //             break;
-        //         case 8: monthName = whatMonth(8)
-        //             break;
-        //         case 9: monthName = whatMonth(9)
-        //             break;
-        //         case 10: monthName = whatMonth(10)
-        //             break;
-        //         case 11: monthName = whatMonth(11)
-        //             break;
-        //         case 12: monthName = whatMonth(12)
-        //             break;
-        //         case 0: break;
-        //         default: alert(`А це за яким календарем ??!)))`)
-        //             break;
-        //     }
-        //     if (monthNum == 0)
-        //         break
-        //     else
-        //         alert(monthName)
+        //     let monthName 
+        Тут не потрібно switch (monthNum) можна одразу викликати функцію 
+        if(monthName>=1 && monthName<=12)
+        {
+           monthName = whatMonth(monthNum)   У функції вказуємо номер місяця
+                alert(monthName)
+        }
+        else
+           alert(`А це за яким календарем ??!)))`)
+
         // } while (monthNum !== 0)
 
 
@@ -214,7 +191,7 @@
         // do {
         //     let dayNum = parseInt(prompt(`Введіть номер дня тижня :\nВихід - "0"`))
         //     let message
-        //     switch (dayNum) {
+        //     switch (dayNum) {    Аналогічно, не потрібно switch
         //         case 1: message = getHowManyLessons(1)
         //             break;
         //         case 2: message = getHowManyLessons(2)
