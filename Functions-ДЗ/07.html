@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Функції</title>
+    <script>
+        // -----------------------------------------------------------------------------
+        // Задача 3. Створити окремі функції, які для 4 чисел знаходять:
+        // 1)суму;
+        // 2)добуток;
+        // 3)середнє арифметичне;
+        // 4)мінімальне значення. 
+
+        // ///<summary>
+        // /// Це функція для обчислення суми чисел
+        // ///<summary>
+        // ///<param name="а">Ціле число 'а'</param>
+        // ///<param name="b">Ціле число 'b'</param>
+        // ///<param name="c">Ціле число 'c'</param>
+        // ///<param name="d">Ціле число 'd'</param>
+        // function getSum(a, b, c, d) {
+        //     document.write(`Сума чисел a, b, c, d = ${a + b + c + d}`)
+        // }
+        ///<summary>
+        /// Це функція для обчислення добутку чисел
+        ///<summary>
+        ///<param name="а">Ціле число 'а'</param>
+        ///<param name="b">Ціле число 'b'</param>
+        ///<param name="c">Ціле число 'c'</param>
+        ///<param name="d">Ціле число 'd'</param>
+        // function getMult(a, b, c, d) {
+        //     document.write(`Добуток чисел a, b, c, d = ${a * b * c * d}`)
+        // }
+        // ///<summary>
+        // /// Це функція для обчислення середнього арифметичного
+        // ///<summary>
+        // ///<param name="а">Ціле число 'а'</param>
+        // ///<param name="b">Ціле число 'b'</param>
+        // ///<param name="c">Ціле число 'c'</param>
+        // ///<param name="d">Ціле число 'd'</param>
+        // function getAverage(a, b, c, d) {
+        //     document.write(`Середнє арифметичне значення чисел a, b, c, d = ${(a + b + c + d) / 4}`)
+        // }
+        // ///<summary>
+        // /// Це функція для визначення мінімального значення
+        // ///<summary>
+        // ///<param name="а">Ціле число 'а'</param>
+        // ///<param name="b">Ціле число 'b'</param>
+        // ///<param name="c">Ціле число 'c'</param>
+        // ///<param name="d">Ціле число 'd'</param>
+        // function getMin(a, b, c, d) {
+        //     if (a < b && a < c && a < d)
+        //         document.write(`Мінімальним є число "а" - ${a}`)
+        //     else
+        //         if (b < a && b < c && b < d)
+        //             document.write(`Мінімальним є число "b" - ${b}`)
+        //         else
+        //             if (c < a && c < b && c < d) {
+        //                 document.write(`Мінімальним є число "c" - ${c}`)
+        //             }
+        //             else
+        //                 if (d < a && d < b && d < c)
+        //                     document.write(`Мінімальним є число "d" - ${d}`)
+        //                 else
+        //                     if (a == b && a == c && a == d)
+        //                         document.write(`Числа a, b, c, d - рівні!`)
+        // }
+        // let a = parseInt(prompt(`Введіть ціле число 'а'`))
+        // let b = parseInt(prompt(`Введіть ціле число 'b'`))
+        // let c = parseInt(prompt(`Введіть ціле число 'c'`))
+        // let d = parseInt(prompt(`Введіть ціле число 'd'`))
+        // let toDo = parseInt(prompt(`
+        // Що обчислимо?!
+        // 1. Суму чисел
+        // 2. Добуток чисел
+        // 3. Середнє арифметичне
+        // 4. Знайти мінімальне`))
+        //     var res
+        //     switch (toDo) {
+        //         case 1: res = getSum(a, b, c, d)
+        //             break;
+        //             case 2: res = getMult(a, b, c, d)
+        //             break;
+        //             case 3: res = getAverage(a, b, c, d)
+        //             break;
+        //             case 4: res = getMin(a, b, c, d)
+        //             break;
+        //         default: alert (`Невірне значення!`)
+        //             break;
+        //     }
+
+        // -----------------------------------------------------------------------------------------
+        // Задача 4. Створити функцію, яка для 3 заданих чисел знаходить кількість парних.
+        /// Це функція для визначення кількості парних чисел
+        ///<summary>
+        ///<param name="а">Ціле число 'а'</param>
+        ///<param name="b">Ціле число 'b'</param>
+        ///<param name="c">Ціле число 'c'</param>
+        // function getManyPair(a, b, c) {
+        //     let pair = 0
+        //     if (a % 2 == 0)
+        //         pair += 1
+        //     if (b % 2 == 0)
+        //         pair += 1
+        //     if (c % 2 == 0)
+        //         pair += 1
+        //     alert(`Серед вказаних чисел, парних - ${pair}!`)
+        // }
+        // let a = parseInt(prompt(`Введіть ціле число 'а'`))
+        // let b = parseInt(prompt(`Введіть ціле число 'а'`))
+        // let c = parseInt(prompt(`Введіть ціле число 'а'`))
+        // getManyPair(a, b, c)
+
+        // -----------------------------------------------------------------------------------
+        // Задача 5. Створити функції, які переводять:
+        // 1) Сантиметри у дюйми;
+        // 2) Кілограми у фунти;
+        // 3) Кілометри у милі.
+        // function getInchFromCentim(sm) {
+        //     document.write(`${sm} см. = ${(sm * 0.393701).toFixed(3)} дюйма`)
+        // }
+        // function getPoundFromKg(kg) {
+        //     document.write(`${kg} кг. = ${(kg * 2.20462).toFixed(3)} фунта`)
+        // }
+        // function getMileFromKm(km) {
+        //     document.write(`${km} км. = ${(km * 0.621371).toFixed(3)} милі`)
+        // }
+        // let userChoice = parseInt(prompt(`
+        // Виберіть дію:
+        // 1. Превести сантиметри у дюйми
+        // 2. Превести кілограми у фунти
+        // 3. Перевести кілометри у милі`))
+        // switch (userChoice) {
+        //     case 1: x = parseFloat(prompt(`Введіть довжину в сантиметрах`))
+        //         getInchFromCentim(x)
+        //         break;
+        //     case 2: x = parseFloat(prompt(`Введіть масу в кілограммах`))
+        //         getPoundFromKg(x)
+        //         break;
+        //     case 3: x = parseFloat(prompt(`Введіть довжину в кілометрах`))
+        //         getMileFromKm(x)
+        //         break;
+        //     default: alert(`Невірне значення!`)
+        //         break;
+        // }
+
+        // ---------------------------------------------------------------------------------------
+        // Задача 6. Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців
+        // <<< !!! ДЛЯ КОРЕКТНОЇ РОБОТИ ПРОГРАМИ РОЗКОМЕНТУЙТЕ ТЕГ <STYLE> !!! >>>
+        // ///<summary>
+        // /// Це функція для створення таблиці
+        // ///<summary>
+        // ///<param name="rowCount">Кількість рядків таблиці</param>
+        // ///<param name="colCount">Кількість стовпців таблиці</param>
+        // function creatRowsAndCols(rowCount, colCount) {
+        //     document.write(`<table>`)
+        //     for (let i = 0; i < rowCount; i++) {
+        //         document.write(`<tr>`)
+        //         for (let j = 0; j < colCount; j++) {
+        //             document.write(`<td>`)
+        //             document.write(`</td>`)
+        //         }
+        //         document.write(`</tr>`)
+        //     }
+        //     document.write(`</table>`)
+        // }
+        // alert(`Намалюємо табличку? ;)`)
+        // let rowCount = parseInt(prompt(`Введіть кількість рядків :`))
+        // let colCount = parseInt(prompt(`Введіть кількість стовпців :`))
+        // creatRowsAndCols(rowCount, colCount)
+
+        // ----------------------------------------------------------------------------------------------
+        // Задача 7. Створити функцію, яка випадковим чином виводить на екран одне із 4 зображень 
+        // (шляхи до зображень передаються у функцію)
+        // function getPicture(a, b, c, d) {
+        //     let rand = Math.floor(Math.random() * 4) + 1;
+        //     switch (rand) {
+        //         case 1: document.write(a)
+        //             break;
+        //         case 2: document.write(b)
+        //             break;
+        //         case 3: document.write(c)
+        //             break;
+        //         case 4: document.write(d)
+        //             break;
+        //         default: alert(`Error! Try again...`)
+        //             break;
+        //     }
+        // }
+        // getPicture(
+        //     `<img src="https://i.gifer.com/7UW0.gif">`,
+        //     `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_zC0V-4RHoIWQT6F30qVyeodKJBhNpDxE0dsVGBAq_sq9iQSY">`,
+        //     `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5fpJUD2Qv7UfI831CDabsLPMOGrUMyoz8EXC10jLygJZbUGEN">`,
+        //     `<img src="http://cdn01.ru/files/users/images/e3/61/e361bd4238fe12cb5957012ede429753.png">`)
+
+        // ---------------------------------------------------------------------------------------------------------
+        // Задача 8. Створити функцію, яка виводить банер (у функцію передаються: зображення, заголовок та посилання, 
+        // куди переходимо при кліку на зображення 
+        // (тег img повине знаходитись у середині тега a: <a> <img src=”шлях”> </a>
+        // <<< !!! ДЛЯ КОРЕКТНОЇ РОБОТИ ПРОГРАМИ РОЗКОМЕНТУЙТЕ ТЕГ <STYLE> !!! >>>
+        ///<summary>
+        ///Це функція для виведення на екран рекламного баннеру
+        ///<summary>
+        ///<param name="pic">Малюнок баннера</param>
+        ///<param name="title">Заголовок</param>
+        ///<param name="href">Посилання на сайт</param>
+        // function displayBanner(pic, title, href) {
+        //     document.write(`<h1 id="name">${title}</h1><br>
+        //     <a href="${href}"><img src="${pic}" alt="${title}"></a>`)
+        // }
+        // displayBanner(`https://farm8.staticflickr.com/7077/7368815142_6e5b2cba4a_b.jpg`,
+        //     `Все для дому, саду, та декору!`,
+        //     `https://www.houseandgarden.co.uk/`)
+    </script>
+
+    <style>
+        table,
+        td {
+            border: 2px solid darkslategrey
+        }
+
+        td {
+            height: 25px;
+            width: 25px
+        }
+
+        #name {
+            position: absolut;
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1></h1>
+
+</body>
+
+</html>
