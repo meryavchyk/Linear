@@ -196,7 +196,6 @@
         //     return c
         // }
         // function getCountText(nameIvanCount) {
-
         //     var countText = ``
         //     if (nameIvanCount == 1)
         //         countText = `раз`
@@ -220,13 +219,29 @@
         // Надаючи користувачу можливість вибирати номери елементів  (поки він не відмовиться). 
         // Знаходити сумарний виграш.
 
-        let numArr = []
-        for (let i = 0; i < 20; i++) {
-           let n = -500 + Math.floor(Math.random()) * (500 + 1 -500)
-           numArr.push(n)
+        function getNumArr() {
+            let numArr = []
+            for (let i = 0; i < 1000; i++) {
+                let n = Math.floor(-500 + (500 - (-500) + 1) * Math.random());
+                numArr.push(n)
+            }
+            return numArr
         }
 
-        console.log(numArr)
+        function getUserChoiseSum(numArr) {
+            let choice
+            let sum = 0
+            do {
+                choice = parseInt(prompt('Маємо числа від -500 до 500, захованих в одній тисячі комірок.\nВводячи номери комірок від 1 до 1000, Ви додаєте або віднімаєте якесь число\nДізнайтесь виграшну суму "0"'))
+                sum += numArr[choice-1]
+            } while (choice!==0)
+            return sum
+        }
+
+        let numArr = getNumArr()
+        let userChoiceSum = getUserChoiseSum()
+        alert(`Ваш сумарний виграш :\n${userChoiceSum}`)
+        
 
     </script>
 </head>
