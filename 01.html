@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // --------------------------------------------------------------------------------------
+        // 1. Дано масив, який містить оцінки з К предметів. 
+        // Знайти середній бал і з’ясувати до якої категорії він відноситься 
+        // (відмінник, двійочник (має хоча би одну двійку), 
+        // хорошист (оцінки добре і відмінно), 
+        // трійочник(є хоча би одна трійка)).
+
+        // function getArrOfMarks(marksCount) {
+        //     let marks = []
+        //     for (let i = 0; i < marksCount; i++) {
+        //         let k = parseInt(prompt(`Введіть оцінку з предмету № ${i + 1} :`))
+        //         marks.push(k)
+        //     }
+        //     return marks
+        // }
+
+        // function getAvvMark(marks) {
+        //     let sum = 0
+        //     for (let i = 0; i < marks.length; i++) {
+        //         sum += marks[i]
+        //     }
+        //     let res = sum / marks.length
+        //     return res.toFixed(2)
+        // }
+
+        // function isStudentGood(marks) {
+        //     let res = ``
+        //     let bad = marks.indexOf(2)
+        //     let mid = marks.indexOf(3)
+        //     let good = marks.indexOf(4)
+        //     if (bad >= 0)
+        //         res = `Двійочник...(`
+        //     else
+        //         if (mid >= 0)
+        //             res = `Трійочник.`
+        //         else
+        //             if (good >= 0)
+        //                 res = `Хорошист.`
+        //             else
+        //                 res = 'Відмінник!'
+        //     return res
+        // }
+
+        // let marksCount = parseInt(prompt(`Введіть кількість оцінок :`))
+        // let marks = getArrOfMarks(marksCount)
+        // let avvMark = getAvvMark(marks)
+        // let res = isStudentGood(marks)
+
+        // document.write(`Середній бал : ${avvMark} <br>`)
+        // document.write(`Даний студент - ${res}`)
+
+
+        // ------------------------------------------------------------------------------------------------- 
+        // 2. Дано масив, який зберігає кількість відвідувачів магазину протягом тижня. Вивести на екран:
+        // •	номери днів, протягом яких кількість відвідувачів була меншою за 20;
+        // •	номери днів, коли кількість відвідувачів була мінімальною;
+        // •	номери днів, коли кількість відвідувачів була мінімальною;
+        // •	загальну кількість клієнтів у робочі дні та окремо загальну кількість днів на вихідних.
+
+        // function getWeekVisitorCount() {
+        //     let res = []
+        //     for (let i = 0; i < 7; i++) {
+        //         let n = parseInt(prompt(`Введіть кількість відвідувачів магазину, День ${i + 1} :`))
+        //         res.push(n)
+        //     }
+        //     return res
+        // }
+        // function getDaysVisLess20(weekVisitorCount) {
+        //     let less20 = []
+        //     let res = []
+        //     for (let i = 0; i < weekVisitorCount.length; i++) {
+        //         if (weekVisitorCount[i] < 20)
+        //             less20.push(i)
+        //     }
+        //     for (let i = 0; i < less20.length; i++) {
+        //         if (less20[i] == 0)
+        //             res.push(`Понеділок`)
+        //         else if (less20[i] == 1)
+        //             res.push(`Вівторок`)
+        //         else if (less20[i] == 2)
+        //             res.push(`Середу`)
+        //         else if (less20[i] == 3)
+        //             res.push(`Червер`)
+        //         else if (less20[i] == 4)
+        //             res.push(`П'ятницю`)
+        //         else if (less20[i] == 5)
+        //             res.push(`Суботу`)
+        //         else if (less20[i] == 6)
+        //             res.push(`Неділю`)
+        //     }
+        //     return res
+        // }
+        // function getVisMin(weekVisitorCount) {
+        //     let min = 0
+        //     for (let i = 0; i < weekVisitorCount.length; i++) {
+        //         if (weekVisitorCount[min]> weekVisitorCount[i+1]) 
+        //             min = i+1
+        //     }
+        //     return min
+        // }
+        // function getVisMax(weekVisitorCount) {
+        //     let max = 0
+        //     for (let i = 0; i < weekVisitorCount.length; i++) {
+        //         if (weekVisitorCount[max]< weekVisitorCount[i+1]) 
+        //         max = i+1
+        //     }
+        //     return max
+        // }
+        // function getWorkdayVisSum(weekVisitorCount) {
+        //     let sum = 0
+        //     for (let i = 0; i < 5; i++) {
+        //        sum +=weekVisitorCount[i]
+        //     }
+        //     return sum
+        // }
+        // function getWeekendVisSum(weekVisitorCount) {
+        //     let sum = weekVisitorCount[5]+weekVisitorCount[6]     
+        //     return sum
+        // }
+
+        // function getDaysName(a) {
+        //     let d = [`Понеділок`, `Вівторок`, `Середа`, `Четвер`, `Пятницю`, `Суботу`, `Неділю`]
+        //     return d[a]
+        // }
+
+        // let weekVisitorCount = getWeekVisitorCount()
+        // let visLess20 = getDaysVisLess20(weekVisitorCount)
+        // let visMin = getVisMin(weekVisitorCount)
+        // let visMax = getVisMax(weekVisitorCount)
+        // let workdayVisSum = getWorkdayVisSum(weekVisitorCount)
+        // let weekendVisSum = getWeekendVisSum(weekVisitorCount)
+        // let daysNameMin = getDaysName(visMin)
+        // let daysNameMax = getDaysName(visMax)
+
+        // document.write(`У ${visLess20.join(`; `)} відвідувачів магазину було менше 20.<br>`)
+        // document.write(`У ${daysNameMin} відвідувачів магазину було найменше за тиждень.<br>`)
+        // document.write(`У ${daysNameMax} відвідувачів магазину було найбільше за тиждень.<br>`)
+        // document.write(`У робочі дні загальна кількість відвідувачів склала - ${workdayVisSum} осіб.<br>`)
+        // document.write(`У вихідні дні загальна кількість відвідувачів склала - ${weekendVisSum} осіб.<br>`)
+
+
+        // -----------------------------------------------------------------------------------------------
+        // 3. Дано масив імен учнів. З’ясувати скільки разів зустрічається ім’я «Іван».
+        // function getArrNames() {
+        //     let names = []
+        //     let c = parseInt(prompt(`Введіть кількість імен :`))
+        //     for (let i = 0; i < c; i++) {
+        //         let n = prompt(`Введіть ім'я №${i + 1}:`)
+        //         names.push(n)
+        //     }
+        //     return names
+        // }
+
+        // function getIvanCount(names) {
+        //     var c = 0
+        //     for (let i = 0; i < names.length; i++) {
+        //         if (names[i] == `Іван`)
+        //             c = c + 1
+        //     }
+        //     return c
+        // }
+        // function getCountText(nameIvanCount) {
+        //     var countText = ``
+        //     if (nameIvanCount == 1)
+        //         countText = `раз`
+        //     else
+        //         if (nameIvanCount >= 2 && nameIvanCount <= 4)
+        //             countText = `рази`
+        //         else
+        //             countText = `разів`
+        //     return countText
+        // }
+
+        // let names = getArrNames()
+        // let nameIvanCount = getIvanCount(names)
+        // let countText = getCountText(nameIvanCount)
+
+        // document.write(`Серед імен: ${names.join(`, `)}<br>ім'я "Іван" зустрічається ${nameIvanCount} ${countText}`)
+
+        // --------------------------------------------------------------------------------------
+        // 4. Дано одновимірний масив, у якому зберігається певна виграшна сума 
+        // (елементи заповнюються випадковим чином значеннями від -500 до 500). 
+        // Надаючи користувачу можливість вибирати номери елементів  (поки він не відмовиться). 
+        // Знаходити сумарний виграш.
+
+        // function getNumArr() {
+        //     let numArr = []
+        //     for (let i = 0; i < 1000; i++) {
+        //         let n = Math.floor(Math.random() * 1001) - 500
+        //         numArr.push(n)
+        //     }
+        //     return numArr
+        // }
+
+        // function getUserChoiseSum(numArr) {
+        //     let choice
+        //     let sum = 0
+        //     do {
+        //         choice = parseInt(prompt('Маємо числа від -500 до 500, захованих в одній тисячі комірок.\nВводячи номери комірок від 1 до 1000, Ви додаєте або віднімаєте якесь число\nДізнайтесь виграшну суму натиснувши "0"'))
+        //         if (choice>0)
+        //         sum += numArr[choice - 1]
+        //     } while (choice !== 0)
+        //     return sum
+        // }
+
+        // let numArr = getNumArr()
+        // let userChoiceSum = getUserChoiseSum(numArr)
+        // alert(`Ваш сумарний виграш :\n${userChoiceSum}`)
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
