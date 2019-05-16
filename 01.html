@@ -82,7 +82,7 @@
         //             less20.push(i)
         //     }
         //     for (let i = 0; i < less20.length; i++) {
-        //         if (less20[i] == 0)
+        //         if (less20[i] == 0)         Цей фрагмент також можна було винести у функцію (функція могла б повертати назву дня)
         //             res.push(`Понеділок`)
         //         else if (less20[i] == 1)
         //             res.push(`Вівторок`)
@@ -102,7 +102,7 @@
         // function getVisMin(weekVisitorCount) {
         //     let min = 0
         //     for (let i = 0; i < weekVisitorCount.length; i++) {
-        //         if (weekVisitorCount[min]> weekVisitorCount[i+1]) 
+        //         if (weekVisitorCount[min]> weekVisitorCount[i+1])    //Тут вихід за межі допустимого діапазону
         //             min = i+1
         //     }
         //     return min
@@ -110,7 +110,7 @@
         // function getVisMax(weekVisitorCount) {
         //     let max = 0
         //     for (let i = 0; i < weekVisitorCount.length; i++) {
-        //         if (weekVisitorCount[max]< weekVisitorCount[i+1]) 
+        //         if (weekVisitorCount[max]< weekVisitorCount[i+1])    //Вихід за межі допустимого діапазону
         //         max = i+1
         //     }
         //     return max
@@ -170,7 +170,7 @@
         // }
         // function getCountText(nameIvanCount) {
         //     var countText = ``
-        //     if (nameIvanCount == 1)
+        //     if (nameIvanCount == 1)  А не краще було використати switch?
         //         countText = `раз`
         //     else
         //         if (nameIvanCount >= 2 && nameIvanCount <= 4)
