@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ДЗ-1</title>
+
+    <script>
+        // Знайти суму парних елементів
+        // let arr = [22, 17, 40, 18, 9, 7, 59, 100]
+        // let newArr = arr.filter(x => x % 2 == 0).reduce((x, result)=>{result+=x; return result})
+        // alert(newArr)
+
+        // // Задача 1. Дано масив цілих чисел. Кожне від’ємне число замінити на 0.
+        // let a = [23, 16, -7, 150, -12 , -94, 6, 30]
+        // function parChangeTo0(el, i, arr) {
+        //     if (el<0) {
+        //         arr[i]=0
+        //     }
+        // }
+        // a.forEach(parChangeTo0)
+        // alert (a)
+
+
+        // Задача 2. Дано масив цін. 
+        // Сформувати новий масив, який містить тільки ті ціни, які менші за задану.
+        // let pricesArray = [22.60, 320, 76, 1678, 54.4, 1200, 90, 260, 870, 1400, 100, 79.99, 212, 650, 820, 533, 45, 3]
+        // var borderPrice = parseFloat(prompt(`Введіть граничну ціну :`))
+        // var res = pricesArray.filter(x=>x<borderPrice)
+        // alert(res)
+
+        //   Задача 3. Дано масив цін товарів. Для цін, які менші за 1000грн. 
+        //   додати 20% ціни, для тих, які більші за 1000 грн. відняти 30%.
+        // function getPriceFilter(el, i, arr) {
+        //     if (el < 1000)
+        //         arr[i] = arr[i] * 1.2
+        //     else
+        //         if (el > 1000)
+        //             arr[i] = arr[i] * 0.7
+        //     arr[i] = arr[i].toFixed(2)
+        // }
+        // let pricesArray = [22.60, 320, 76, 1678, 54.4, 1200, 90, 260, 870, 1400, 100, 79.99, 212, 650, 820, 533, 45, 3]
+        // pricesArray.forEach(getPriceFilter)
+        // alert(pricesArray)
+
+        // Задача 4. Дано масив імен. Сформувати новий масив, який складається з імен, 
+        // які починаються на задану літеру.
+        // let namesArr = [`Іван`, `Семен`, `Оксана`, `Олег`, `Володимир`, `Світлана`, `Ігор`, `Олексій`, `Андрій`]
+        // let charChoice = prompt('Введіть першу літеру :').toUpperCase()
+        // let namesChoose = namesArr.filter(x=>x.charAt(0)==charChoice.charAt(0))
+        // alert (namesChoose)
+
+        // // Задача 5. Дано ваги автомобілів на парковці.
+        // //  З’ясувати, чи усі автомобілі є легковими (легшими за 2000 кг).
+        // function getMassArray(carCount) {
+        //     let massArr = []
+        //     for (let i = 0; i < carCount; i++) {
+        //         let el = parseInt(prompt(`Введіть масу автомобіля ${i+1} :`))
+        //         massArr.push(el)
+        //     }
+        //     return massArr
+        // }
+        // let massArray = getMassArray(parseInt(prompt(`Введіть кількість авто на парковці :`)))
+        // if (massArray.every(x=>x<2000))
+        // alert ('На парковці всі автомобілі легкові!')
+        // else
+        // alert ('Увага! На парковці є вантажні автомобілі!!!')
+
+        // Задача 6. Дано масив, який зберігає кількість відвідувачів протягом тижня. 
+        // З’ясувати, чи були дні, коли кількість відвідувачів була меншою за 10.
+        // function getDayName(dayNum) {
+        //     let res = [`Понеділок`, `Вівторок`, `Середу`, `Четвер`, `П'ятницю`, `Суботу`, `Неділю`]
+        //     return res[dayNum]
+        // }
+        // function getWeekWissArr() {
+        //     let res = []
+        //     for (let i = 0; i < 7; i++) {
+        //         let el = parseInt(prompt(`Введіть кількість відвідувачів у ${getDayName(i)} :`))
+        //         res.push(el)
+        //     }
+        //     return res
+        // }
+        // let weekWissCount = (getWeekWissArr())
+        // if (weekWissCount.some(x=>x<10))
+        // alert(`Протягом тижня були дні, коли відвідувачів було менше 10!`)
+        // else
+        // alert(`Протягом тижня, щодня відвідувачів було більше 10!`)
+
+        // Задача 7. Розробити функцію, яка би для довільної кількості переданих символів визначала, 
+        // кількість букв «а».
+        // function getSymbACount(symbs) {
+        //     let count = 0
+        //     let symbsArr = symbols.split(``)
+        //     for (const el of symbsArr) {
+        //         if (el == `A` | el == `А`)
+        //             count++
+        //     }
+        //     return count
+        // }
+
+        // let symbols = prompt(`Введіть довільну кількість символів`).toUpperCase()
+        // let result = getSymbACount(symbols)
+        // alert(`Серед введених вами символів, ${result} разів зустрічається літера "а"`)
+
+        // Задача 8. Розробити функцію, яка би для довільної кількості чисел знаходила добуток чисел.
+        // function getMult(numsStr) {
+        //         let res = 1
+        //         let numArr = numsStr.split(`,`)
+        //         for (const el of numArr) {
+        //             res *= el
+        //         }
+        //         return res
+        //     }
+
+        // let numsStr = prompt(`Введіть довільну кількість чисел, розділивши їх знаком ","`)
+        // let result = getMult(numsStr)
+        // alert(result)
+
+        // ??? Задача 9. Розробити функцію, яка би для довільної кількості чисел знаходила максимальне.
+        // function getMax(numsStr) {
+        //         let numArr = numsStr.split(`,`)
+        //         let max = numArr[0]
+        //         for (const el of numArr) {
+        //             if (el>max)
+        //             max = el
+        //         }
+        //         return max
+        //     }
+        // let numsStr = prompt(`Введіть довільну кількість чисел, розділивши їх знаком ","`)
+        // let result = getMax(numsStr)
+        // alert(result)
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
