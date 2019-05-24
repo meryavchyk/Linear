@@ -10,7 +10,11 @@
     <script>
         // Знайти суму парних елементів
         // let arr = [22, 17, 40, 18, 9, 7, 59, 100]
-        // let newArr = arr.filter(x => x % 2 == 0).reduce((x, result)=>{result+=x; return result})
+        // let newArr = arr.filter(x => x % 2 == 0).reduce((x, result)=>result+x ) Тут можна було одразу reduce
+        
+        
+        
+        let newArr = arr.reduce((x, result)=>x % 2 == 0?result+x:result)
         // alert(newArr)
 
         // // Задача 1. Дано масив цілих чисел. Кожне від’ємне число замінити на 0.
@@ -20,7 +24,7 @@
         //         arr[i]=0
         //     }
         // }
-        // a.forEach(parChangeTo0)
+        // a.forEach(parChangeTo0)   Краще було одразу стлікову функцію
         // alert (a)
 
 
@@ -90,7 +94,7 @@
 
         // Задача 7. Розробити функцію, яка би для довільної кількості переданих символів визначала, 
         // кількість букв «а».
-        // function getSymbACount(symbs) {
+        // function getSymbACount(symbs) {      Зробіть це (і наступні) з викристанням reduce (попередньо перетворити рядок символів у масив    s.split(''))
         //     let count = 0
         //     let symbsArr = symbols.split(``)
         //     for (const el of symbsArr) {
