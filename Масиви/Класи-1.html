@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Класи-1</title>
+    <script>
+        // ================Задача. Створити об’єкт «Діапазон»==================
+        // Поля (властивості)	Нижня межа
+        //                      Верхня межа
+        // Методи (дії)	Перевірка того, чи належить діапазону
+        //              Генерування випадкового числа з вказаного діапазону
+
+        // function Diapason(lowerBorder, upperBorder) {
+        //     this.lowerBorder = lowerBorder
+        //     this.upperBorder = upperBorder
+        // }
+        // Diapason.prototype.toString = function () {
+        //     return `Diapason: LowerBord = ${this.lowerBorder}; UpperBord = ${this.upperBorder}`
+        // }
+        // Diapason.prototype.isInDiapason = function (num) {
+        //     if (num >= this.lowerBorder && num <= this.upperBorder)
+        //         return `Number ${num} is in Diapason!`
+        //     else
+        //         return `Number ${num} is out of Diapason...(`
+        // }
+        // Diapason.prototype.getRandNumOfDiapason = function () {
+        //     return this.lowerBorder + Math.floor(Math.random() * this.upperBorder)
+        // }
+        // let range1 = new Diapason(3, 12)
+        // let range2 = new Diapason(7, 18)
+        // let whatIs1 = range1.toString()
+        // let whatIs2 = range2.toString()
+        // let isIn1 = range1.isInDiapason(5)
+        // let isIn2 = range2.isInDiapason(5)
+        // let rand1 = range1.getRandNumOfDiapason()
+        // let rand2 = range2.getRandNumOfDiapason()
+
+        // ===================Задача. Створити об’єкт «Клієнт»=====================
+
+        // Поля(властивості)	ПІБ
+        //                      Номер рахунку
+        //                      Кількість коштів
+        // Методи (дії)	Зняття грошей з рахунку
+        //              Додавання грошей на рахунок
+
+        // function NewClient(name, account, money) {
+        //     this.name = name
+        //     this.account = account
+        //     this.money = money
+        // }
+        // NewClient.prototype.toString = function () {
+        //     return `Custumer: ${this.name} - Account Number - |${this.account}| - Balance: ${this.money}`
+        // }
+        // NewClient.prototype.takeDownMoney = function (sum) {
+        //     this.money = this.money - sum
+        // }
+        // NewClient.prototype.takeUpMoney = function (sum) {
+        //     this.money = this.money + sum
+        // }
+        // let custumer1 = new NewClient('Андріїв Б.Є.', 2600101, 110000)
+        // let custumer2 = new NewClient('Погорєлов В.В.', 2600202, 250000)
+        // let custumer3 = new NewClient('Ратушняк С.М.', 2600303, 330000)
+        // custumer1.toString()
+        // custumer2.takeDownMoney(50000)
+        // custumer3.takeUpMoney(70000)
+        // document.write(`${custumer1}<br>${custumer2}<br>${custumer3}`)
+
+        // =====================Задача. Створити об’єкт «Авто».================== 
+        // 
+        // Поля(властивості)	Марка
+        //                      Розмір бака
+        //                      Кількість наявних літрів
+        //                      Кількість місць
+        //                      Кількість пасажирів
+        // Методи (дії)	Заправка на вказану кількість літрів
+        //              Виведення кількості пасажирів
+        //              Додавання пасажирів
+        //              Висадка пасажирів
+        // function GetNewCar(name, fuelSize, fuelCount, placeCount, passengCount) {
+        //     this.name = name
+        //     this.fuelSize = fuelSize
+        //     this.fuelCount = fuelCount
+        //     this.placeCount = placeCount
+        //     this.passengCount = passengCount
+        // }
+        // GetNewCar.prototype.toString = function () {
+        //     return `Vehicle: ${this.name} 
+        //     || Fuel Tank Size: ${this.fuelSize} 
+        //     || In Fuel tank: ${this.fuelCount} l. 
+        //     || Places in car: ${this.placeCount} 
+        //     || In car: ${this.passengCount} passeng.
+        //     <br>`
+        // }
+        // GetNewCar.prototype.fuelUp = function (liters) {
+        //     let deficit = this.fuelSize-this.fuelCount
+        //     if (liters>deficit) {
+        //         this.fuelCount=this.fuelSize
+        //     }
+        //     else 
+        //         this.fuelCount+=liters
+        // }
+        // GetNewCar.prototype.boardingPassengUp = function (income) {
+        //     let deficit = this.placeCount-this.passengCount
+        //     if (income>deficit) {
+        //         this.passengCount=this.placeCount
+        //     }
+        //     else 
+        //         this.passengCount+=income
+        // }
+        // GetNewCar.prototype.departPassengDown = function (income) {
+        //    if (this.passengCount<income)
+        //    this.passengCount = 0
+        //    else
+        //    this.passengCount-=income
+        // }
+        // let opelCadet = new GetNewCar (`Opel Cadet`, 45, 20, 5, 3)
+        // document.write(opelCadet)
+        // opelCadet.fuelUp(15)
+        // document.write(opelCadet)
+        // opelCadet.boardingPassengUp(1)
+        // document.write(opelCadet)
+        // opelCadet.departPassengDown(2)
+        // document.write(opelCadet)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
