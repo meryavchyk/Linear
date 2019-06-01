@@ -124,10 +124,70 @@
         // document.write(opelCadet)
         // opelCadet.departPassengDown(2)
         // document.write(opelCadet)
+
+        // =================Задача.========================================================================== 
+        // Створити об’єкт «Тир». У масиві зберігаються 1, якщо у цьому квадраті є заєць і 0 в іншому випадку.
+        // 		
+        // Поля(властивості)	Масив, у якому зберігається поле з зайцями
+        //      
+        // Методи (дії)	        Метод пострілу (задається позиція пострілу)
+        //                      Виведення ігрового поля
+
+        function CreateSgootingGallery(targetCellCount) {
+            let arr = []
+            for (let i = 0; i < targetCellCount; i++) {
+                let num = Math.floor(Math.random() * 2)
+                arr.push(num)
+            }
+            this.targetField = arr
+            let td = ``
+            for (let i = 0; i < this.targetField.length; i++) {
+                td += `<td id="target${i}">*</td>`
+            }
+            return document.write(`<table>
+                        <tr>
+                            ${td}
+                        </tr>
+                    </table>`)
+        }
+        CreateSgootingGallery.prototype.toString = function () {
+            return `This Target Field has ${this.targetField.length} target cells`
+        }
+        CreateSgootingGallery.prototype.makeShot = function (shot) {
+            if (this.targetField[shot-1]==1) 
+                document.getElementById(`target${shot-1}`).innerText=`1`
+            else
+                document.getElementById(`target${shot-1}`).innerText=`0`
+        }
+        CreateSgootingGallery.prototype.printTargetField = function () {
+            let td = ``
+            for (let i = 0; i < this.targetField.length; i++) {
+                td += `<td id="target${i}">*</td>`
+            }
+            return document.write(`<table>
+                        <tr>
+                            ${td}
+                        </tr>
+                    </table>`)
+        }
+        let targetField = new CreateSgootingGallery(12)
+        targetField.makeShot(10)
+        targetField.makeShot(3)
+        targetField.makeShot(9)    
+        targetField.printTargetField()
     </script>
+    <style>
+        td {
+            border: 2px solid black;
+            background-color: whitesmoke;
+            width: 10pt;
+            text-align: center
+        }
+    </style>
 </head>
 
 <body>
+
 
 </body>
 
