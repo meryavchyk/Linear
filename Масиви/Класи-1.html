@@ -21,10 +21,10 @@
         //     return `Diapason: LowerBord = ${this.lowerBorder}; UpperBord = ${this.upperBorder}`
         // }
         // Diapason.prototype.isInDiapason = function (num) {
-        //     if (num >= this.lowerBorder && num <= this.upperBorder)   Тут краще було повертати true/false
-        //         return `Number ${num} is in Diapason!`
+        //     if (num >= this.lowerBorder && num <= this.upperBorder)   
+        //         return true
         //     else
-        //         return `Number ${num} is out of Diapason...(`
+        //         return false
         // }
         // Diapason.prototype.getRandNumOfDiapason = function () {
         //     return this.lowerBorder + Math.floor(Math.random() * this.upperBorder)
@@ -34,17 +34,25 @@
         // let whatIs1 = range1.toString()
         // let whatIs2 = range2.toString()
         // let isIn1 = range1.isInDiapason(5)
+        // if (isIn1) 
+        // document.write(`Your number is in Diapason!`)
+        // else
+        // document.write(`Your number is out of Diapason...(`)
         // let isIn2 = range2.isInDiapason(5)
+        // if (isIn1) 
+        // document.write(`Your number is in Diapason!`)
+        // else
+        // document.write(`Your number is out of Diapason...(`)
         // let rand1 = range1.getRandNumOfDiapason()
         // let rand2 = range2.getRandNumOfDiapason()
 
-        // ===================Задача. Створити об’єкт «Клієнт»=====================
+        // // ===================Задача. Створити об’єкт «Клієнт»=====================
 
-        // Поля(властивості)	ПІБ
-        //                      Номер рахунку
-        //                      Кількість коштів
-        // Методи (дії)	Зняття грошей з рахунку
-        //              Додавання грошей на рахунок
+        // // Поля(властивості)	ПІБ
+        // //                      Номер рахунку
+        // //                      Кількість коштів
+        // // Методи (дії)	Зняття грошей з рахунку
+        // //              Додавання грошей на рахунок
 
         // function NewClient(name, account, money) {
         //     this.name = name
@@ -68,17 +76,18 @@
         // custumer3.takeUpMoney(70000)
         // document.write(`${custumer1}<br>${custumer2}<br>${custumer3}`)
 
-        // =====================Задача. Створити об’єкт «Авто».================== 
-        // 
-        // Поля(властивості)	Марка
-        //                      Розмір бака
-        //                      Кількість наявних літрів
-        //                      Кількість місць
-        //                      Кількість пасажирів
-        // Методи (дії)	Заправка на вказану кількість літрів
-        //              Виведення кількості пасажирів
-        //              Додавання пасажирів
-        //              Висадка пасажирів
+        // // =====================Задача. Створити об’єкт «Авто».================== 
+        // // 
+        // // Поля(властивості)	Марка
+        // //                      Розмір бака
+        // //                      Кількість наявних літрів
+        // //                      Кількість місць
+        // //                      Кількість пасажирів
+        // // Методи (дії)	Заправка на вказану кількість літрів
+        // //              Виведення кількості пасажирів
+        // //              Додавання пасажирів
+        // //              Висадка пасажирів
+
         // function GetNewCar(name, fuelSize, fuelCount, placeCount, passengCount) {
         //     this.name = name
         //     this.fuelSize = fuelSize
@@ -125,56 +134,97 @@
         // opelCadet.departPassengDown(2)
         // document.write(opelCadet)
 
-        // =================Задача.========================================================================== 
-        // Створити об’єкт «Тир». У масиві зберігаються 1, якщо у цьому квадраті є заєць і 0 в іншому випадку.
-        // 		
-        // Поля(властивості)	Масив, у якому зберігається поле з зайцями
-        //      
-        // Методи (дії)	        Метод пострілу (задається позиція пострілу)
-        //                      Виведення ігрового поля
+        // // =================Задача.========================================================================== 
+        // // Створити об’єкт «Тир». У масиві зберігаються 1, якщо у цьому квадраті є заєць і 0 в іншому випадку.
+        // // 		
+        // // Поля(властивості)	Масив, у якому зберігається поле з зайцями
+        // //      
+        // // Методи (дії)	        Метод пострілу (задається позиція пострілу)
+        // //                      Виведення ігрового поля
 
-        function CreateSgootingGallery(targetCellCount) {
-            let arr = []
-            for (let i = 0; i < targetCellCount; i++) {
-                let num = Math.floor(Math.random() * 2)
-                arr.push(num)
+        // function CreateSgootingGallery(targetCellCount) {
+        //     let arr = []
+        //     for (let i = 0; i < targetCellCount; i++) {
+        //         let num = Math.floor(Math.random() * 2)
+        //         arr.push(num)
+        //     }
+        //     this.targetField = arr
+        //     let td = ``
+        //     for (let i = 0; i < this.targetField.length; i++) {
+        //         td += `<td id="target${i}">*</td>`
+        //     }
+        //     return document.write(`<table>
+        //                 <tr>
+        //                     ${td}
+        //                 </tr>
+        //             </table>`)
+        // }
+        // CreateSgootingGallery.prototype.toString = function () {
+        //     return `This Target Field has ${this.targetField.length} target cells`
+        // }
+        // CreateSgootingGallery.prototype.makeShot = function (shot) {
+        //     if (this.targetField[shot-1]==1) 
+        //         document.getElementById(`target${shot-1}`).innerText=`1`
+        //     else
+        //         document.getElementById(`target${shot-1}`).innerText=`0`
+        // }
+        // CreateSgootingGallery.prototype.printTargetField = function () {
+        //     let td = ``
+        //     for (let i = 0; i < this.targetField.length; i++) {
+        //         td += `<td id="target${i}">*</td>`
+        //     }
+        //     return document.write(`<table>
+        //                 <tr>
+        //                     ${td}
+        //                 </tr>
+        //             </table>`)
+        // }
+        // let targetField = new CreateSgootingGallery(12)
+        // targetField.makeShot(10)
+        // targetField.makeShot(3)
+        // targetField.makeShot(9)    
+        // targetField.printTargetField()
+
+        // ==================Рулетка=========================================		
+        // Поля(властивості)	  Масив, у якому зберігаються бали ігрового барабану
+        // Методи (дії)	          Метод для випадкового визначення кількості балів
+        //                        Виведення ігрового барабану на екран (у формі таблиці)
+        function GetRouletteNums() {
+            this.roulette = [
+                [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36],
+                [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35],
+                [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34]
+            ]
+        }
+        GetRouletteNums.prototype.toString = function () {
+            return `Use your chance - play roulette!`
+        }
+        GetRouletteNums.prototype.getRouletteNum = function () {
+            let row = Math.floor(Math.random() * 3)
+            let col = Math.floor(Math.random() * 12)
+            return `Your Sum is: [${this.roulette[row][col]}]`
+        }
+        GetRouletteNums.prototype.printRoulette = function () {
+
+            let table = `<table>`
+            for (let row = 0; row < this.roulette.length; row++) {
+                table += `<tr>`
+                for (let col = 0; col < this.roulette[row].length; col++) {
+                    table += `<td>${this.roulette[row][col]}</td>`
+                }
+                table += `</tr>`
             }
-            this.targetField = arr
-            let td = ``
-            for (let i = 0; i < this.targetField.length; i++) {
-                td += `<td id="target${i}">*</td>`
-            }
-            return document.write(`<table>
-                        <tr>
-                            ${td}
-                        </tr>
-                    </table>`)
+            table += `</table>`
+            return table
         }
-        CreateSgootingGallery.prototype.toString = function () {
-            return `This Target Field has ${this.targetField.length} target cells`
-        }
-        CreateSgootingGallery.prototype.makeShot = function (shot) {
-            if (this.targetField[shot-1]==1) 
-                document.getElementById(`target${shot-1}`).innerText=`1`
-            else
-                document.getElementById(`target${shot-1}`).innerText=`0`
-        }
-        CreateSgootingGallery.prototype.printTargetField = function () {
-            let td = ``
-            for (let i = 0; i < this.targetField.length; i++) {
-                td += `<td id="target${i}">*</td>`
-            }
-            return document.write(`<table>
-                        <tr>
-                            ${td}
-                        </tr>
-                    </table>`)
-        }
-        let targetField = new CreateSgootingGallery(12)
-        targetField.makeShot(10)
-        targetField.makeShot(3)
-        targetField.makeShot(9)    
-        targetField.printTargetField()
+
+        let rou = new GetRouletteNums()
+        let t = rou.toString()
+        let mySum = rou.getRouletteNum()
+        let a = rou.printRoulette()
+        document.write(t)
+        document.write(a)
+        document.write(mySum)
     </script>
     <style>
         td {
