@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Класи-ДЗ(конструктор)</title>
+
+    <script>
+//  ====== Не дочитав умову задачі і зробив перевіряльник множення, по аналогії з тим,======== 
+// ======= який розв'язували на уроці (додавання)=============================================
+// ....єдине, що не працює - це сумування правильних/неправильних відповідей.
+        // class GetMultChecker {
+        //     constructor() {
+        //         this.rightAnswerCount = 0
+        //         this.wrongAnswerCount = 0
+        //     }
+        //     onClick () {
+        //         const firstNumber = parseInt(this.inputFirstNum.value)
+        //         const secondNumber = parseInt(this.inputSecondNum.value)
+        //         const multResult = parseInt(this.inputMult.value)
+        //         if (firstNumber*secondNumber==multResult) 
+        //             this.rightAnswerCount++
+        //         else 
+        //             this.wrongAnswerCount++
+        //         this.rightAnswerSpan.innerText = `${this.inputFirstNum.value} * ${this.inputSecondNum.value} = ${this.inputFirstNum.value * this.inputSecondNum.value}`
+        //     }
+        //     render() {
+        //         const mainDiv = document.createElement(`div`)
+
+        //         const divFirstNum = document.createElement(`div`)
+        //         let label = document.createElement(`label`)
+        //         label.innerText = `First number : `
+        //         this.inputFirstNum = document.createElement(`input`)
+        //         this.inputFirstNum.value = `0`
+        //         label.appendChild(this.inputFirstNum)
+        //         divFirstNum.appendChild(label)
+
+        //         const divSecondNum = document.createElement(`div`)
+        //         label = document.createElement(`label`)
+        //         label.innerText = `Second number : `
+        //         this.inputSecondNum = document.createElement(`input`)
+        //         this.inputSecondNum.value = `0`
+        //         label.appendChild(this.inputSecondNum)
+        //         divSecondNum.appendChild(label)
+
+        //         const divMult = document.createElement(`div`)
+        //         label = document.createElement(`label`)
+        //         label.innerText = `Multiplication : `
+        //         this.inputMult = document.createElement(`input`)
+        //         this.inputMult.value = `0`
+        //         label.appendChild(this.inputMult)
+        //         divMult.appendChild(label)
+
+        //         let button = document.createElement(`button`)
+        //         button.innerText = `Check result!`
+        //         button.onclick = this.onClick.bind(this)
+
+        //         const divRightAnsw = document.createElement(`div`)
+        //         divRightAnsw.innerText = `Right answer : `
+        //         this.rightAnswerSpan = document.createElement(`span`)
+        //         divRightAnsw.appendChild(this.rightAnswerSpan)
+
+        //         const divCount = document.createElement(`div`)
+        //         let labelRight = document.createElement(`label`)
+        //         labelRight.innerText = `Count : Right [${this.rightAnswerCount}] | Wrong [${this.wrongAnswerCount}]`
+        //         divCount.appendChild(labelRight)
+
+        //         mainDiv.appendChild(divFirstNum)
+        //         mainDiv.appendChild(divSecondNum)
+        //         mainDiv.appendChild(divMult)
+        //         mainDiv.appendChild(button)
+        //         mainDiv.appendChild(divRightAnsw)
+        //         mainDiv.appendChild(divCount)
+
+        //         return mainDiv
+        //     }
+        // }
+        // window.onload = function () {
+        //     const addChecker = new GetMultChecker()
+        //     document.getElementById('container').appendChild(addChecker.render())
+        // }
+
+        //============= Задача. Розробити клас Baner ========================== 
+        // Поля	        Масив об’єктів ( графічних зображень та посилань на сайти)
+
+        //методи	    Метод випадкового вибору об’єкта (графічного зображення та посилання)
+        //              render
+
+        class GetBannerByClick {
+            constructor(links, pics) {
+                this.bannerArr = []
+                this.bannerArr.push(links)
+                this.bannerArr.push(pics)
+            }
+            onClick() {
+                const elIndex = Math.floor(Math.random() * this.bannerArr[0].length)
+                this.aBannerTag.href = `${this.bannerArr[0][elIndex]}`
+                this.imgBannerTag.src = `${this.bannerArr[1][elIndex]}`
+            }
+            render() {
+                const mainDiv = document.createElement(`div`)
+
+                const bannerDiv = document.createElement(`div`)
+                let p = document.createElement(`p`)
+                this.aBannerTag = document.createElement(`a`)
+                this.imgBannerTag = document.createElement(`img`)
+                this.aBannerTag.appendChild(this.imgBannerTag)
+                p.appendChild(this.aBannerTag)
+                bannerDiv.appendChild(p)
+
+                const buttonDiv = document.createElement(`div`)
+                let button = document.createElement(`button`)
+                button.innerText = `Get banner!`
+                button.onclick = this.onClick.bind(this)
+                buttonDiv.appendChild(button)
+
+                mainDiv.appendChild(bannerDiv)
+                mainDiv.appendChild(buttonDiv)
+
+                return mainDiv
+            }
+        }
+        window.onload = function () {
+            const banners = new GetBannerByClick(
+                [`https://en.wikipedia.org/wiki/Christmas`,
+                    `https://en.wikipedia.org/wiki/Good_morning`,
+                    `https://xn----7sbbfsshef0aedydgg4lyb.xn--p1ai/a/%D0%9F%D0%92%D0%A1%D0%A7%D0%9F%D0%A1%D0%92`,
+                    `https://en.wikipedia.org/wiki/October`
+                ],
+                [`https://cdn3.volusion.com/vnkdx.ywhel/v/vspfiles/photos/0615-2.jpg?1539941140`,
+                    `https://pixel77.com/wp-content/uploads/2010/01/29.JPG`,
+                    `https://ds02.infourok.ru/uploads/ex/010a/0008b399-160277b1/hello_html_14865141.jpg`,
+                    `https://site-574127.mozfiles.com/files/574127/Calendar09.png`
+                ]
+            )
+            document.getElementById('container').appendChild(banners.render())
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+</body>
+
+</html>
