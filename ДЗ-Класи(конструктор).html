@@ -90,13 +90,13 @@
 
         class GetBannerByClick {
             constructor(links, pics) {
-                this.bannerArr = []
+                this.bannerArr = []    Краще було зберігати масив об"єктів
                 this.bannerArr.push(links)
                 this.bannerArr.push(pics)
             }
             onClick() {
                 const elIndex = Math.floor(Math.random() * this.bannerArr[0].length)
-                this.aBannerTag.href = `${this.bannerArr[0][elIndex]}`
+                this.aBannerTag.href = `${this.bannerArr[0][elIndex]}`  
                 this.imgBannerTag.src = `${this.bannerArr[1][elIndex]}`
             }
             render() {
