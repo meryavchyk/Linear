@@ -8,23 +8,24 @@
     <title>Класи-ДЗ(конструктор)</title>
 
     <script>
-//  ====== Не дочитав умову задачі і зробив перевіряльник множення, по аналогії з тим,======== 
-// ======= який розв'язували на уроці (додавання)=============================================
-// ....єдине, що не працює - це сумування правильних/неправильних відповідей.
+        //  ====== Не дочитав умову задачі і зробив перевіряльник множення, по аналогії з тим,======== 
+        // ======= який розв'язували на уроці (додавання)=============================================
         // class GetMultChecker {
         //     constructor() {
         //         this.rightAnswerCount = 0
         //         this.wrongAnswerCount = 0
         //     }
-        //     onClick () {
+        //     onClick() {
         //         const firstNumber = parseInt(this.inputFirstNum.value)
         //         const secondNumber = parseInt(this.inputSecondNum.value)
         //         const multResult = parseInt(this.inputMult.value)
-        //         if (firstNumber*secondNumber==multResult) 
+        //         if (firstNumber * secondNumber == multResult) {
         //             this.rightAnswerCount++
-        //         else 
+        //         }
+        //         else
         //             this.wrongAnswerCount++
         //         this.rightAnswerSpan.innerText = `${this.inputFirstNum.value} * ${this.inputSecondNum.value} = ${this.inputFirstNum.value * this.inputSecondNum.value}`
+        //         this.labelRightAnswer.innerText = `Count : Right [${this.rightAnswerCount}] | Wrong [${this.wrongAnswerCount}]`
         //     }
         //     render() {
         //         const mainDiv = document.createElement(`div`)
@@ -63,9 +64,8 @@
         //         divRightAnsw.appendChild(this.rightAnswerSpan)
 
         //         const divCount = document.createElement(`div`)
-        //         let labelRight = document.createElement(`label`)
-        //         labelRight.innerText = `Count : Right [${this.rightAnswerCount}] | Wrong [${this.wrongAnswerCount}]`
-        //         divCount.appendChild(labelRight)
+        //         this.labelRightAnswer = document.createElement(`label`)
+        //         divCount.appendChild(this.labelRightAnswer)
 
         //         mainDiv.appendChild(divFirstNum)
         //         mainDiv.appendChild(divSecondNum)
