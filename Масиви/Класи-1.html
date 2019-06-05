@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Класи-1</title>
+    
+<script src="E:\Cource\Repositories\Linear\ООП\js\script.js"></script>
     <script>
         // ================Задача. Створити об’єкт «Діапазон»==================
         // Поля (властивості)	Нижня межа
@@ -163,10 +165,10 @@
         //     return `This Target Field has ${this.targetField.length} target cells`
         // }
         // CreateSgootingGallery.prototype.makeShot = function (shot) {
-        //     if (this.targetField[shot-1]==1) 
-        //         document.getElementById(`target${shot-1}`).innerText=`1`
+        //     if (this.targetField[shot - 1] == 1)
+        //         document.getElementById(`target${shot - 1}`).innerText = `1`
         //     else
-        //         document.getElementById(`target${shot-1}`).innerText=`0`
+        //         document.getElementById(`target${shot - 1}`).innerText = `0`
         // }
         // CreateSgootingGallery.prototype.printTargetField = function () {
         //     let td = ``
@@ -182,62 +184,167 @@
         // let targetField = new CreateSgootingGallery(12)
         // targetField.makeShot(10)
         // targetField.makeShot(3)
-        // targetField.makeShot(9)    
+        // targetField.makeShot(6)
         // targetField.printTargetField()
 
-        // ==================Рулетка=========================================		
-        // Поля(властивості)	  Масив, у якому зберігаються бали ігрового барабану
-        // Методи (дії)	          Метод для випадкового визначення кількості балів
-        //                        Виведення ігрового барабану на екран (у формі таблиці)
-        function GetRouletteNums() {
-            this.roulette = [
-                [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36],
-                [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35],
-                [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34]
-            ]
-        }
-        GetRouletteNums.prototype.toString = function () {
-            return `Use your chance - play roulette!`
-        }
-        GetRouletteNums.prototype.getRouletteNum = function () {
-            let row = Math.floor(Math.random() * 3)
-            let col = Math.floor(Math.random() * 12)
-            return `Your Sum is: [${this.roulette[row][col]}]`
-        }
-        GetRouletteNums.prototype.printRoulette = function () {
+        // // ==================Рулетка=========================================		
+        // // Поля(властивості)	  Масив, у якому зберігаються бали ігрового барабану
 
-            let table = `<table>`
-            for (let row = 0; row < this.roulette.length; row++) {
-                table += `<tr>`
-                for (let col = 0; col < this.roulette[row].length; col++) {
-                    table += `<td>${this.roulette[row][col]}</td>`
-                }
-                table += `</tr>`
-            }
-            table += `</table>`
-            return table
-        }
+        // // Методи (дії)	          Метод для випадкового визначення кількості балів
+        // //                        Виведення ігрового барабану на екран (у формі таблиці)
+        // class Roulette {
+        //     constructor() {
+        //         this.roulette = [
+        //             [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36],
+        //             [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35],
+        //             [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34]
+        //         ]
+        //         this.score = 0
+        //     }
+        //     toString() {
+        //         return `Use your chance - play roulette!`
+        //     }
+        //     getRouletteNum() {
+        //         const row = Math.floor(Math.random() * 3)
+        //         const col = Math.floor(Math.random() * 12)
+        //         return `Your Sum is: [${this.roulette[row][col]}]`
+        //     }
+        //     renderRoulette() {
+        //         var table = `<table>`
+        //         for (let row = 0; row < this.roulette.length; row++) {
+        //             table += `<tr>`
+        //             for (let col = 0; col < this.roulette[row].length; col++) {
+        //                 table += `<td>${this.roulette[row][col]}</td>`
+        //             }
+        //             table += `</tr>`
+        //         }
+        //         table += `</table>`
+        //         return table
+        //     }
+        //     // // Функція яку прив'язуємо до кнопки
+        //     // onClick () {
+        //     //     const curretnScore = this.getRouletteNum()
+        //     //     this.score+=curretnScore
+        //     //     this.span.innerText=this.score
+        //     // }
+        //     // render () {
+        //     //     const div = document.createElement(`div`)
+        //     //     const table = renderRoulette()
+        //     //     div.appendChild(table)
+        //     //     const btn = document.createElement(`button`)
+        //     //     btn.innerText=`Go`
+        //     //     btn.onclick = this.onClick.bind(this)
+        //     //     div.appendChild(btn)
+        //     //     const divScore = document.createElement(`div`)
+        //     //     divScore.innerText=`Score :`
+        //     //     this.span=document.createElement(`span`)
+        //     //     this.span.innerText=this.score
+        //     //     divScore.appendChild(this.span)
+        //     //     div.appendChild(divScore)
+        //     //     return div
+        //     // } 
+        // }
 
-        let rou = new GetRouletteNums()
-        let t = rou.toString()
-        let mySum = rou.getRouletteNum()
-        let a = rou.printRoulette()
-        document.write(t)
-        document.write(a)
-        document.write(mySum)
+        // let rou = new Roulette()
+        // let text = rou.toString()
+        // let myNum = rou.getRouletteNum()
+        // let disp = rou.renderRoulette()
+        // document.write(text)
+        // document.write(disp)
+        // document.write(myNum)
+
+    //     class AddChecker {
+    //         constructor () {
+    //             this.rightAnswersNumber = 0
+    //             this.wrongAnswersNumber = 0
+    //         }
+
+    //     onClick () {
+    //         const firstNum = parseInt(this.inpFirstNumber.value)
+    //         const secondNum = parseInt(this.inpSecondNumber.value)
+    //         const userSum = parseInt(this.inpSumNumber.value)
+    //         if(firstNum+secondNum==userSum)
+    //             this.rightAnswersNumber++
+    //         else
+    //             this.wrongAnswersNumber++
+    //         this.rightAnsSpan.innerText = this.rightAnswersNumber
+    //         this.wrongAnsSpan.innerText = this.wrongAnswersNumber
+    //         this.ansSpan.innerText = `${firstNum} + ${secondNum} = ${firstNum+secondNum}`
+    //     }
+    //     render () {
+    //         const div = document.createElement(`div`)
+    //         let lbl = document.createElement(`label`)
+    //         lbl.innerText = `First Number`
+    //         this.inpFirstNumber=document.createElement(`input`)
+    //         this.inpFirstNumber.value=`0`
+    //         lbl.appendChild(this.inpFirstNumber)
+    //         div.appendChild(lbl)
+
+    //         lbl = document.createElement(`label`)
+    //         lbl.innerText = `Sacond Number`
+    //         this.inpSecondNumber=document.createElement(`input`)
+    //         this.inpSecondNumber.value=`0`
+    //         lbl.appendChild(this.inpSecondNumber)
+    //         div.appendChild(lbl)
+
+    //         lbl = document.createElement(`label`)
+    //         lbl.innerText = `Summa`
+    //         this.inpSumNumber=document.createElement(`input`)
+    //         this.inpSumNumber.value=`0`
+    //         lbl.appendChild(this.inpSumNumber)
+    //         div.appendChild(lbl)
+
+    //         let btn = document.createElement(`button`)
+    //         btn.innerText = `Check`
+    //         btn.onclick = this.onClick.bind(this)
+    //         div.appendChild(btn)
+
+    //         let spanDiv = document.createElement(`div`)
+    //         div.innerText = `Right answers count:`
+    //         this.rightAnsSpan = document.createElement(`span`)
+    //         spanDiv.appendChild(this.rightAnsSpan)
+    //         div.appendChild(spanDiv)
+
+    //         spanDiv = document.createElement(`div`)
+    //         div.innerText = `Wrong answers count:`
+    //         this.wrongAnsSpan = document.createElement(`span`)
+    //         spanDiv.appendChild(this.wrongAnsSpan)
+    //         div.appendChild(spanDiv)
+
+    //         spanDiv = document.createElement(`div`)
+    //         div.innerText = `Right answer :`
+    //         this.ansSpan = document.createElement(`span`)
+    //         spanDiv.appendChild(this.ansSpan)
+    //         div.appendChild(spanDiv)
+
+    //         return div
+    //     }
+    // }
+    // window.onload = function () {
+    //     const addChecker = new AddChecker()
+    //     document.getElementById(`container`).appendChild(addChecker.render())
+    // }
+    
+    window.onload = function () {
+        const converter = new Converter(27, 30)
+        document.getElementById(`container`).appendChild(converter.render())
+    }
+
     </script>
     <style>
         td {
             border: 2px solid black;
             background-color: whitesmoke;
-            width: 10pt;
+            width: 13pt;
             text-align: center
         }
     </style>
 </head>
 
 <body>
+<div id="container"> 
 
+</div>
 
 </body>
 
