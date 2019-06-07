@@ -8,7 +8,7 @@
 
     <!-- <script src="./js/Bankomat.js"></script> -->
     <script src="./js/Staff01.1.js"></script>
-    <!-- <script src="./js/TTime.js"></script> -->
+    <script src="./js/TTime.js"></script>
     <script src="./js/Rectangle.js"></script>
     <script>
         // window.onload=function(){
@@ -73,9 +73,14 @@
         //     document.getElementById('container').appendChild(staffList.render())
         // }
 
+        // window.onload=function(){
+        //     const rectangle = new Rectangle(5, 4)
+        //     document.getElementById('container').appendChild(rectangle.render())
+        // }
+
         window.onload=function(){
-            const rectangle = new Rectangle(5, 4)
-            document.getElementById('container').appendChild(rectangle.render())
+            const ttime = new TTime(5, 4)
+            document.getElementById('container').appendChild(ttime.render())
         }
             
     </script>
